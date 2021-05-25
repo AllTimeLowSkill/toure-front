@@ -40,8 +40,16 @@ export default {
     }),
 
     searchHandel() {
-      return this.toures.filter((toure) =>
-        toure.title.toLowerCase().includes(this.filterVal.toLowerCase())
+      return this.toures.filter(
+        (toure) =>
+          toure.title.toLowerCase().includes(this.filterVal.toLowerCase()) ||
+          toure.city.toLowerCase().includes(this.filterVal.toLowerCase()) ||
+          String(toure.price)
+            .toLowerCase()
+            .includes(this.filterVal.toLowerCase()) ||
+          toure.hotel.toLowerCase().includes(this.filterVal.toLowerCase()) ||
+          toure.start.toLowerCase().includes(this.filterVal.toLowerCase()) ||
+          toure.end.toLowerCase().includes(this.filterVal.toLowerCase())
       )
     },
   },

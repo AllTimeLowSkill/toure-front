@@ -14,7 +14,7 @@
       <router-view />
     </main>
     <footer class="col-12">
-      <span>footer</span>
+      <span>rusik10032000@mail.ru</span>
     </footer>
   </div>
 </template>

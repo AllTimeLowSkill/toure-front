@@ -13,6 +13,14 @@ const routes = [
     component: () => import('../views/Home'),
   },
   {
+    path: '/cities',
+    name: 'cities',
+    meta: {
+      layout: 'default',
+    },
+    component: () => import('../views/Cities'),
+  },
+  {
     path: '/toure/:id',
     name: 'Toure',
     meta: {

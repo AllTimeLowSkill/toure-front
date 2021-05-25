@@ -31,7 +31,7 @@
         </tr>
       </tbody>
     </table>
-    <div class="d-flex justify-content-between">
+    <div class="d-flex justify-content-between mb-3">
       <button class="btn btn-success" @click="set_cart(toure)">
         Добавить в карзину
       </button>
