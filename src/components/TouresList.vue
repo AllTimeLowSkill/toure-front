@@ -17,6 +17,7 @@ export default {
 
 <style lang="scss" scoped>
 .card-list {
+  margin-top: 2rem;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
 }

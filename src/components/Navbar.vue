@@ -1,5 +1,5 @@
 <template>
-  <nav class="d-flex justify-content-around mb-2 mt-2">
+  <nav class="d-flex justify-content-around mb-2 mt-2 nav-wrap">
     <div class="d-flex">
       <a class="mr-2" target="_bank" href="https://www.instagram.com/">
         <img src="../assets/inst.png" alt="" />
@@ -35,4 +35,10 @@ export default {
 }
 </script>
 
-<style></style>
+<style>
+.nav-wrap {
+  padding-top: 1rem;
+  box-shadow: 0 0 10px 0 rgb(89, 122, 223);
+  border-radius: 4px;
+}
+</style>

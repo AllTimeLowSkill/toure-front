@@ -7,14 +7,18 @@
     </template>
     <template v-else>
       <Navbar />
-      <div class="d-flex">
-        <input
-          v-model="filterVal"
-          class="form-control me-2"
-          type="search"
-          placeholder="Поиск тура"
-          aria-label="Search"
-        />
+      <div class="wrap-block">
+        <span class="header-page">Туры</span>
+        <div class="d-flex align-items-center justify-content-between">
+          <label class="filter-label" for="">Фильтр</label>
+          <input
+            v-model="filterVal"
+            class="form-control me-2"
+            type="search"
+            placeholder="Поиск тура"
+            aria-label="Search"
+          />
+        </div>
       </div>
       <toures-list :toures="searchHandel" />
     </template>
@@ -71,3 +75,27 @@ export default {
   },
 }
 </script>
+
+<style lang="scss" scoped>
+.filter-label {
+  font-size: 24px;
+  font-weight: 700;
+  font-family: 'Open Sans', sans-serif;
+
+  color: rgb(89, 122, 223);
+  padding-right: 1rem;
+}
+.header-page {
+  display: inline-block;
+  font-size: 36px;
+  font-weight: 700;
+  font-family: 'Open sans', sans-serif;
+  padding: 2rem 1rem;
+  color: rgb(89, 122, 223);
+}
+.wrap-block {
+  box-shadow: 0 0 10px 0 rgb(89, 122, 223);
+  border-radius: 4px;
+  padding: 1rem 2rem;
+}
+</style>

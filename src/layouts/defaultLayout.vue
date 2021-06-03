@@ -1,7 +1,9 @@
 <template>
   <div class="layout-container">
     <div class="start-img d-flex justify-content-center align-items-center">
-      <h1>Отправся в свое лучшее путешествие в месте с нами!</h1>
+      <span class="start-greeting">
+        Отправся в свое лучшее путешествие в месте с нами!
+      </span>
     </div>
     <header class="col-12">
       <router-link class="logo" to="/">Logo</router-link>
@@ -52,13 +54,23 @@ export default {
   }
 
   .start-img {
-    background-image: url('../assets/startImg.jpeg');
+    background-image: url('../assets/startImg.gif');
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
     color: white;
     height: 100vh;
     width: 100%;
+
+    .start-greeting {
+      display: inline-block;
+      font-family: 'Open sans', sans-serif;
+      font-weight: 800;
+      color: white;
+      font-size: 10rem;
+      padding: 0 2rem;
+      text-shadow: 1px 5px 15px rgb(72, 132, 230);
+    }
   }
 
   header {
