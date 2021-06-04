@@ -7,6 +7,9 @@ const mutations = {
   DELETE_ITEM({ cart }, id) {
     cart.splice(id, 1)
   },
+  DELETE_ALL(state) {
+    state.cart = []
+  },
 }
 const actions = {
   async handleBuy({ getters }) {

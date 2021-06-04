@@ -38,6 +38,9 @@
         >
           Оплатить
         </button>
+        <template v-if="isError">
+          <h3>Ууууупсб что то пошло не так^^</h3>
+        </template>
       </template>
     </template>
   </div>
@@ -53,6 +56,7 @@ export default {
     return {
       isPay: false,
       complete: false,
+      isError: false,
       stripeOptions: {
         // see https://stripe.com/docs/stripe.js#element-options for details
       },
@@ -71,6 +75,7 @@ export default {
   methods: {
     ...mapMutations({
       delete_item: 'DELETE_ITEM',
+      deleteAll: 'DELETE_ALL',
     }),
 
     ...mapActions({
@@ -78,9 +83,15 @@ export default {
     }),
 
     async handlegetpaymentIntent() {
-      const intent = await this.handleBuy()
-      this.paymentIntent = intent.client_secret
-      await handleCardPayment(this.paymentIntent)
+      try {
+        const intent = await this.handleBuy()
+        this.paymentIntent = intent.client_secret
+        await handleCardPayment(this.paymentIntent)
+        this.deleteAll()
+        this.$router.push('/')
+      } catch (error) {
+        this.isError = true
+      }
     },
   },
 }
