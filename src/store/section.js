@@ -12,10 +12,6 @@ const state = () => ({
       to: '/about',
     },
     {
-      title: 'Наши партнёры',
-      to: '/partners',
-    },
-    {
       title: 'Города',
       to: '/cities',
     },

@@ -39,6 +39,9 @@ const routes = [
   {
     path: '/about',
     name: 'About',
+    meta: {
+      layout: 'default',
+    },
     component: () => import(/* webpackChunkName: "about" */ '../views/About'),
   },
 ]
