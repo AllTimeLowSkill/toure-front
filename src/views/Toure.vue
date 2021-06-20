@@ -31,6 +31,7 @@
         </tr>
       </tbody>
     </table>
+    <Comments />
     <div class="d-flex justify-content-between mb-3">
       <button class="btn btn-success" @click="set_cart(toure)">
         Добавить в карзину
@@ -44,8 +45,12 @@
 
 <script>
 import { mapActions, mapGetters, mapMutations } from 'vuex'
+import Comments from '../components/Comments.vue'
 
 export default {
+  components: {
+    Comments,
+  },
   computed: {
     ...mapGetters({
       toure: 'toure',
